@@ -1,6 +1,6 @@
 # self_practice_BST
 
-Binary Search Tree in C
+Binary Search Tree in C (generic style)
 
        - Binary search(includes finding first/last occur position, floor and ceil)
 
