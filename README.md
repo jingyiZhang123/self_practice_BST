@@ -2,7 +2,7 @@
 
 Binary Search Tree in C
 
-       - Binary search
+       - Binary search(includes finding first/last occur position, floor and ceil)
 
        - Binary search tree (BST)
 
