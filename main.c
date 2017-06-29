@@ -85,13 +85,80 @@ void BST_Test(){
     BST_PostOrder_Traversal(bst, NodePrint);
     printf("--------------------------\n");
 
+
+    int* min_addr = (int*)BST_Find_MinimumKey(bst);
+    printf("minvalue is %d\n", *min_addr);
+    int* max_addr = (int*)BST_Find_MaximumKey(bst);
+    printf("maxvalue is %d\n", *max_addr);
+
+    printf("--------------------------\n");
+    BST_Remove_Max(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    BST_Remove_Max(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    BST_Remove_Max(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    BST_Remove_Max(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    printf("--------------------------\n");
+    BST_Remove_Min(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    BST_Remove_Min(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    BST_Remove_Min(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    BST_Remove_Min(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    BST_Remove_Max(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    BST_Remove_Min(bst);
+    BST_InOrder_Traversal(bst, NodePrint);
+    printf("--------------------------\n");
+    /* extern void BST_Remove_Min(BST_p bst); */
+
+
+    BST_Delete(bst);
+}
+
+void BST_Test2(){
+    BST_p bst = BST_Init(sizeof(int), sizeof(int), IntCompare, IntCompare, NULL);
+    int keys[10];
+    int values[10];
+
+    for (int i=0; i < 10; i++) {
+        keys[i] = rand()%20;
+        values[i] = i*10;
+    }
+    for (int i=0; i < 10; i++) {
+        BST_Insert(bst, &keys[i], &values[i]);
+    }
+
+    for (int i=0; i < 10; i++) {
+        printf("--------------------------\n");
+        BST_Remove_Key(bst, &keys[rand()%10]);
+        BST_InOrder_Traversal(bst, NodePrint);
+        printf("--------------------------\n");
+    }
+
+
     BST_Delete(bst);
 }
 
 
 int main(int argc, char *argv[])
 {
+    BinarySearch_Test();
     BST_Test();
+    BST_Test2();
 
     return 0;
 }

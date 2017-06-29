@@ -8,6 +8,8 @@ Binary Search Tree in C (generic style)
 
        - BST insert nodes
 
+       - BST delete nodes
+
        - BST search nodes
 
        - BST DFS(depth first search): preorder, inoder and postorder

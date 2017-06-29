@@ -50,6 +50,11 @@ extern void BST_PreOrder_Traversal(BST_p bst, operation_p func);
 extern void BST_InOrder_Traversal(BST_p bst, operation_p func);
 extern void BST_PostOrder_Traversal(BST_p bst, operation_p func);
 extern void BST_Delete(BST_p bst);
+extern void* BST_Find_MinimumKey(BST_p bst);
+extern void* BST_Find_MaximumKey(BST_p bst);
+extern void BST_Remove_Max(BST_p bst);
+extern void BST_Remove_Min(BST_p bst);
+extern void BST_Remove_Key(BST_p bst, void* key);
 
 
 #endif
