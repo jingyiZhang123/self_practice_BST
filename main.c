@@ -7,6 +7,7 @@ int IntCompare(void* a, void* b){
     return *(int*)a - *(int*)b;
 }
 
+
 void NodePrint(void* node){
     printf("%d -> %d\n", *(int*)(((Node_p)node)->key), *(int*)(((Node_p)node)->value));
 }
